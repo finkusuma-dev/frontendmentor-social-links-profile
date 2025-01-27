@@ -23,9 +23,22 @@
 }
 
 :root {
+  --color-green: hsl(75, 94%, 57%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey-700: hsl(0, 0%, 20%);
+  --color-grey-800: hsl(0, 0%, 12%);
+  --color-grey-900: hsl(0, 0%, 8%);
+
   --text-preset-1: 700 calc(24rem / 16) / 1.5 'Inter', sans-serif;
   --text-preset-2: 400 calc(14rem / 16) / 1.5 'Inter', sans-serif;
   --text-preset-2-bold: 700 calc(14rem / 16) / 1.5 'Inter', sans-serif;
+
+  --spacing-50: 4px;
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-500: 40px;
 }
 
 body {
