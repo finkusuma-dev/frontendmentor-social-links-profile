@@ -33,12 +33,12 @@
   --text-preset-2: 400 calc(14rem / 16) / 1.5 'Inter', sans-serif;
   --text-preset-2-bold: 700 calc(14rem / 16) / 1.5 'Inter', sans-serif;
 
-  --spacing-50: 4px;
-  --spacing-100: 8px;
-  --spacing-150: 12px;
-  --spacing-200: 16px;
-  --spacing-300: 24px;
-  --spacing-500: 40px;
+  --spacing-50: 4;
+  --spacing-100: 8;
+  --spacing-150: 12;
+  --spacing-200: 16;
+  --spacing-300: 24;
+  --spacing-500: 40;
 }
 
 body {
@@ -51,24 +51,63 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* 
-  & > * {
+
+  /* & > * {
     flex-shrink: 0;
   } */
 }
 
-h1 {
-  font: var(--text-preset-1);
-}
-
 .container {
   position: relative;
+  /* margin-inline: auto; */
+  width: fit-content;
+  padding-inline: 10px;
+}
+
+main {
+  width: fit-content;
 }
 
 .card {
   max-width: calc(327rem / 16);
-  padding: calc(24rem / 16);
+  padding: calc(var(--spacing-300) * 1px);
   background-color: var(--color-grey-800);
+  border-radius: calc(var(--spacing-150) * 1px);
+
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-300) / 16 * 1rem);
+  align-items: stretch;
+
+  text-align: center;
+}
+
+img {
+  width: 88px;
+  height: 88px;
+  margin-inline: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+hgroup {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-50) / 16 * 1rem);
+
+  h1 {
+    font: var(--text-preset-1);
+  }
+
+  .location {
+    font: var(--text-preset-2-bold);
+    color: var(--color-green);
+  }
+}
+
+.description {
+  /* max-width: 279px; */
 }
 
 nav {
@@ -80,7 +119,7 @@ ul {
 
 footer {
   position: absolute;
-  bottom: calc(-40rem / 16);
+  bottom: calc(30 / 16 * -1rem);
 }
 
 .attribution {
