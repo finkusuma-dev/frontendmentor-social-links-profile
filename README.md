@@ -6,11 +6,13 @@ Live URL: https://finkusuma-dev.github.io/frontendmentor-social-links-profile/.
 
 ## CSS Implementation
 
-- Defined properties that are using px/rem unit to determine which properties that need to be scaled along with the default font size.
+- Defined properties that are using px/rem unit to determine which need to be scaled along with the default font size.
+  - `font-size`: rem.
   - `max-width`: rem.
   - `padding`: px.
   - `gap`: rem.
   - width & height of `img`: px.
+  - `border-radius`: px.
 - Remove `px` from spacing variables, so I can use it with px/rem unit.
 - Setup text preset variables to use in the CSS `font` property.
 
