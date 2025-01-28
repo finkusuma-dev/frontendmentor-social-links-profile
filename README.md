@@ -1,5 +1,9 @@
 # Notes
 
+## Links
+
+Live URL: https://finkusuma-dev.github.io/frontendmentor-social-links-profile/.
+
 ## CSS Implementation
 
 - Defined properties that are using px/rem unit to determine which properties that need to be scaled along with the default font size.
