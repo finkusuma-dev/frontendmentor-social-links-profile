@@ -162,5 +162,13 @@ footer {
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  /* color: hsl(228, 45%, 44%); */
+  color: var(--color-green-600);
+}
+
+.attribution a:focus {
+  /* outline: 1px solid var(--color-green); */
+  outline: 1px solid var(--color-white);
+  border-radius: 1px;
+  /* border: 1px solid var(--color-green);   */
 }
