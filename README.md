@@ -2,7 +2,7 @@
 
 ## Links
 
-- Live URL: https://finkusuma-dev.github.io/frontendmentor-social-links-profile/.
+- Live URL: https://finkusuma-dev.github.io/frontendmentor-social-links-profile/
 - Challenge URL: https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ
 
 ## CSS Implementation
