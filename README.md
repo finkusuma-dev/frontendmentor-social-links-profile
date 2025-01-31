@@ -2,7 +2,8 @@
 
 ## Links
 
-Live URL: https://finkusuma-dev.github.io/frontendmentor-social-links-profile/.
+- Live URL: https://finkusuma-dev.github.io/frontendmentor-social-links-profile/.
+- Challenge URL: https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ
 
 ## CSS Implementation
 
@@ -48,7 +49,7 @@ There two ways to solve this:
 
    Width is set using minimum value of 327px or 100 viewport width. If the width of viewport is more than 327px it will constrained to 327px if not it will calculated using viewport width minus padding.
 
-   And the last thing is to set the card's minimum width `min-width: min-content`. Although there is no screen size that really that small, I think it's a good practice.
+   And the last thing is to set the card's minimum width to `min-content`. Although there is no screen size that really that small, I think it's a good practice.
 
    ```css
    .card {
@@ -56,6 +57,10 @@ There two ways to solve this:
      width: min(calc(327rem / 16), calc(100vw - (20px)));
    }
    ```
+
+   | With `min-content`                                | Without `min-content`                                |
+   | ------------------------------------------------- | ---------------------------------------------------- |
+   | <img src="./_docs/min_content.jpg" height="300"/> | <img src="./_docs/no_min_content.jpg" height="300"/> |
 
 [^1]: https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/.
 [^2]: https://developer.mozilla.org/en-US/docs/Web/CSS/font.
