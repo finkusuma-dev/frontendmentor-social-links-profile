@@ -154,14 +154,12 @@ nav {
   }
 }
 
-footer {
+.attribution {
   position: absolute;
   top: calc(100% + (var(--spacing-200) / 16 * 1rem));
   left: 0;
   right: 0;
-}
 
-.attribution {
   font-size: 11px;
   text-align: center;
 
