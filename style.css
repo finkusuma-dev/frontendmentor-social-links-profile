@@ -40,6 +40,9 @@
   --spacing-200: 16;
   --spacing-300: 24;
   --spacing-500: 40;
+
+  --card-width-sm: 327;
+  --card-width-md: 384;
 }
 
 body {
@@ -67,9 +70,9 @@ main {
 }
 
 .card {
-  min-width: min-content;
-  width: min(calc(327rem / 16), calc(100vw - (20px)));
+  width: min(calc(var(--card-width-sm) / 16 * 1rem), calc(100vw - (20px)));
   /* max-width: 327px; */
+  min-width: min-content;
   margin-inline: auto;
   padding: calc(var(--spacing-300) * 1px);
   background-color: var(--color-grey-800);
@@ -81,6 +84,11 @@ main {
   align-items: stretch;
 
   text-align: center;
+
+  @media (min-width: 576px) {
+    width: min(calc(var(--card-width-md) / 16 * 1rem), calc(100vw - (20px)));
+    padding: calc(var(--spacing-500) * 1px);
+  }
 }
 
 img {
