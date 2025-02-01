@@ -19,10 +19,14 @@
 
   ```css
   --text-preset-1: 700 calc(24rem / 16) / 1.5 'Inter', sans-serif;
-  /*([font weight] [font size] / [line-height] [font-family])*/
+  /* ([font weight] [font size] / [line-height] [font-family]) */
 
   font: var(--text-preset-1);
   ```
+
+- Using `:focus-visible` class selector instead of `:focus` on the anchor link, so when clicked/tapped it won't show the focus ring.
+
+  When using `:focus` class selector, click/tap will show the focus ring, like you see on the attribution.
 
 ## CSS Issues
 
@@ -32,10 +36,10 @@ When using flex to center container. Setting `align-items: center` makes the cro
 
 The most wide element inside the card is the description, which occupies less than 327px-(2x24px padding). Setting the flex `align-items` to `center` shrinks the width of children elements to `fit-content` width. This behaviour is the same when the card is wrapped with a container and the container's `width` is set to `fit-content`.
 
-There two ways to solve this:
+There are two ways to solve this:
 
-1. Using `max-width`, but applying another method to center the card.
-   `margin-inline: auto` make the card center horizontally and `top: 50%; transform: translateY(-50%)` to make it center vertically.
+1. Keep using `max-width`, but applying another method to center the card. Set
+   `margin-inline: auto` to make the card center horizontally and `top: 50%; transform: translateY(-50%)` to center vertically.
 
    ```css
    .card {
@@ -47,7 +51,7 @@ There two ways to solve this:
 
 2. Using `width` instead of `max-width`.
 
-   Width is set using minimum value of 327px or 100 viewport width. If the width of viewport is more than 327px it will constrained to 327px if not it will calculated using viewport width minus padding.
+   Set the card's width by utilizing `min()` function, to choose between minimum values of 327px and 100% viewport width. If the width of viewport is more than 327px it will be constrained to 327px. If less it will be calculated using 100% viewport width minus padding.
 
    And the last thing is to set the card's minimum width to `min-content`. Although there is no screen size that really that small, I think it's a good practice.
 
@@ -61,6 +65,11 @@ There two ways to solve this:
    | With `min-content`                                | Without `min-content`                                |
    | ------------------------------------------------- | ---------------------------------------------------- |
    | <img src="./_docs/min_content.jpg" height="300"/> | <img src="./_docs/no_min_content.jpg" height="300"/> |
+
+## TODOs
+
+- [x] Find more about `:focus-visible` class selector.
+- [x] Read more about nested CSS feature.
 
 [^1]: https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/.
 [^2]: https://developer.mozilla.org/en-US/docs/Web/CSS/font.
