@@ -156,7 +156,7 @@ nav {
 
 footer {
   position: absolute;
-  top: calc(100% + (12rem / 16));
+  top: calc(100% + (var(--spacing-200) / 16 * 1rem));
   left: 0;
   right: 0;
 }
