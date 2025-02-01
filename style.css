@@ -160,12 +160,16 @@ nav {
 
 .attribution {
   position: absolute;
-  top: calc(100% + (var(--spacing-200) / 16 * 1rem));
+  top: calc(100% + (var(--spacing-150) / 16 * 1rem));
   left: 0;
   right: 0;
 
   font-size: 11px;
   text-align: center;
+
+  @media (min-width: 576px) {
+    top: calc(100% + (var(--spacing-200) / 16 * 1rem));
+  }
 
   a {
     /* color: hsl(228, 45%, 44%); */
