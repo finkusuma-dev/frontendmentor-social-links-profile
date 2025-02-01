@@ -141,10 +141,8 @@ nav {
     display: block;
   }
 
-  a:focus,
   a:focus-visible {
     outline: 1px solid var(--color-green);
-    /* border: 1px solid var(--color-green); */
   }
 
   a:hover,
