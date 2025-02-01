@@ -70,7 +70,10 @@ main {
 }
 
 .card {
-  width: min(calc(var(--card-width-sm) / 16 * 1rem), calc(100vw - (20px)));
+  width: min(
+    calc(var(--card-width-sm) / 16 * 1rem),
+    calc(100vw - (calc(var(--spacing-300)) * 1px))
+  );
   /* max-width: 327px; */
   min-width: min-content;
   margin-inline: auto;
@@ -86,7 +89,10 @@ main {
   text-align: center;
 
   @media (min-width: 576px) {
-    width: min(calc(var(--card-width-md) / 16 * 1rem), calc(100vw - (20px)));
+    width: min(
+      calc(var(--card-width-md) / 16 * 1rem),
+      calc(100vw - (calc(var(--spacing-300)) * 1px))
+    );
     padding: calc(var(--spacing-500) * 1px);
   }
 }
