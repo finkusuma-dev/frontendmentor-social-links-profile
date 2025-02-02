@@ -124,10 +124,8 @@ hgroup {
 .description {
 }
 
-nav {
-  ul {
-    font: var(--text-preset-2-bold);
-  }
+ul.links {
+  font: var(--text-preset-2-bold);
 
   li {
     list-style: none;
