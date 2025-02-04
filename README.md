@@ -13,7 +13,7 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
   - [My process](#my-process)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
-      - [🟦 `:focus-visible` Class Selectors](#-focus-visible-class-selectors)
+      - [🟦 `:focus-visible` Pseudo-Class Selectors](#-focus-visible-pseudo-class-selectors)
       - [🟦 No Longer Use "Rem Font Size Hack"](#-no-longer-use-rem-font-size-hack)
       - [🟦 Use Both `px` and `rem` Units](#-use-both-px-and-rem-units)
       - [🟦 Removed `px` from CSS Spacing Variables](#-removed-px-from-css-spacing-variables)
@@ -54,9 +54,9 @@ Users should be able to:
 
 ### What I learned
 
-#### 🟦 `:focus-visible` Class Selectors
+#### 🟦 `:focus-visible` Pseudo-Class Selectors
 
-There are two class selectors for element that currently in focus: `:focus` and `:focus-visible`. (Actually three, but this solution only implements two.)
+There are two pseudo-class selectors for element that currently in focus: `:focus` and `:focus-visible`. (Actually three, but this solution only implements two.)
 
 From my testing, the difference between the two:
 
