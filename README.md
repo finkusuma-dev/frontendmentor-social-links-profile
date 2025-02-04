@@ -213,9 +213,9 @@ Thanks to discord member @Darkstar, who confirmed to not use the `nav`.
 
 #### 🟦 Attribution's Position
 
-I'm positioning the attribution just below the solution. But not wrapping by flex for both. The reason is, it will make the screenshot on the frontendmentor solution page to appear not in the center position. Instead I use absolute position for the attribution while wrapping both solution and the attribution inside a container.
+I'm positioning the attribution just below the solution. But not wrapping both by using flex. The reason, it will make the screenshot on the frontendmentor solution page to appear not in the center position. Instead, I use absolute position for the attribution while wrapping both solution and the attribution inside a container.
 
-Previously in the [blog preview card solution](https://www.frontendmentor.io/solutions/i-discovered-a-lot-of-things-on-this-blog-preview-card-challenge-pSdptSJhP1) I positioned the attribution using `bottom` property. But this create an issue. When the screen is very small, the attribution becomes 2 lines and there is no gap between the two. The reason is, the bottom of the attribution is anchored to the bottom of the container. So when it becomes two lines, the bottom stays while the top moves upward.
+Previously, in the [blog preview card solution](https://www.frontendmentor.io/solutions/i-discovered-a-lot-of-things-on-this-blog-preview-card-challenge-pSdptSJhP1) I positions the attribution using `bottom` property. But this creates an issue. When the screen is very small, the attribution becomes 2 lines and there is no gap between the two. This is caused by the bottom of the attribution anchored to the bottom of the container. When it becomes two lines, the bottom stays while the top moves upward.
 
 ```css
 .attribution {
@@ -243,7 +243,7 @@ On this solution, I fixed it by using `top` property, so the attribution's top i
 
 ### Continued development
 
-- I'm not using rem font size hack on this challenge and applying `calc()` function to make writing rem easier. I think this method is not difficult at all to use. I definitely will use this technique in the future, and maybe use the others rem techniques as well.
+- I'm not using rem font size hack on this challenge, but applying `calc()` function to make writing rem easier. I think this method is not difficult to use at all. I definitely will use this technique in the future, and maybe use the others rem techniques as well.
 - To solve the card shrinks when using `max-width` inside a flex, I use `width` and `min()` function: `width: min(calc(327rem / 16), calc(100vw - (24px)))`. Did you face this issue as well, and what was your solution?
 
 ### Useful resources
