@@ -30,7 +30,7 @@
   --color-grey-800: hsl(0, 0%, 12%);
   --color-grey-900: hsl(0, 0%, 8%);
 
-  --text-preset-1: 700 calc(24rem / 16) / 1.5 'Inter', sans-serif;
+  --text-preset-1: 600 calc(24rem / 16) / 1.5 'Inter', sans-serif;
   --text-preset-2: 400 calc(14rem / 16) / 1.5 'Inter', sans-serif;
   --text-preset-2-bold: 700 calc(14rem / 16) / 1.5 'Inter', sans-serif;
 
@@ -49,6 +49,7 @@ body {
   font: var(--text-preset-2);
   color: var(--color-white);
   background-color: var(--color-grey-900);
+  letter-spacing: 0;
 
   height: 100vh;
 
