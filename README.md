@@ -244,7 +244,7 @@ On this solution, I fixed it by using `top` property, so the attribution's top i
 ### Continued development
 
 - I'm not using rem font size hack on this challenge and applying `calc()` function to make writing rem easier. I think this method is not difficult at all to use. I definitely will use this technique in the future, and maybe use the others rem techniques as well.
-- To solve the card shrinks when using `max-width` inside a flex, I use `width` and `calc()` function: `width: min(calc(327rem / 16), calc(100vw - (24px)))`. Did you face this issue as well, and what was your solution?
+- To solve the card shrinks when using `max-width` inside a flex, I use `width` and `min()` function: `width: min(calc(327rem / 16), calc(100vw - (24px)))`. Did you face this issue as well, and what was your solution?
 
 ### Useful resources
 
