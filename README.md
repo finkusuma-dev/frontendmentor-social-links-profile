@@ -56,14 +56,14 @@ Users should be able to:
 
 #### 🟦 `:focus-visible` Pseudo-Class Selectors
 
-There are two pseudo-class selectors for element that currently in focus: `:focus` and `:focus-visible`. (Actually three, but this solution only implements two.)
+There are two pseudo-class selectors for element that currently in focus: `:focus` and `:focus-visible`. (Actually three, but this solution only implements these two.)
 
-From my testing, the difference between the two:
+From my testing, the difference between the two when applied to an anchor link:
 
-- When using `:focus` on an anchor link, and the link is clicked/tapped it will show the focus ring.
-- While using `:focus-visible`, when the link is clicked/tapped it won't show the focus ring.
+- When using `:focus`, clicking/tapping the link will show the focus ring.
+- When using `:focus-visible`, clicking/tapping the link won't show the focus ring.
 
-While using keyboard `tab` key to change focus, both show the focus ring.
+The similarity: when using keyboard `tab` key to change focus, both `:focus` and `:focus-visible` will show the focus ring.
 
 On this solution, I use `:focus-visible` on the anchor links:
 
@@ -86,7 +86,7 @@ and `:focus` on the attribution links:
 }
 ```
 
-Hence, you will see focus ring when clicking/tapping the attribution links, but you won't see it when clicking/tapping the social links.
+Hence, you will see the focus ring when clicking/tapping the attribution links. But you won't see the focus ring when clicking/tapping the social links.
 
 #### 🟦 No Longer Use "Rem Font Size Hack"
 
@@ -117,7 +117,7 @@ Below is the list of properties that use px/rem unit. In summary, if you need a 
 
 #### 🟦 Removed `px` from CSS Spacing Variables
 
-The Figma spacing design tokens have `px` unit attached. So I removed the `px` unit and set it later using `calc()` function. It enables me to attach px/rem unit later, depends on what is needed.
+The Figma spacing design tokens have `px` unit attached. So I removed the `px` unit and set it later using `calc()` function. It enables me to attach px/rem units later, depending on the need.
 
 ```css
 :root {
@@ -158,7 +158,7 @@ The issue is caused by the most wide child element in the card: the description:
 <p>Front-end developer and avid reader.</p>
 ```
 
-The total length of the `p` element is `255.9px`, added two paddings of `24px`, hence the card's width shrinks to `303.9px`.
+The total length of the `p` element is `255.9px`, add two paddings of `24px`, hence the card's width shrinks to `303.9px`.
 
 In my testing, this happens also when the card is put inside a container and the container `width` is set to `fit-content`.
 
@@ -176,13 +176,13 @@ After trials, I concluded there are two ways to solve this:
    }
    ```
 
-   `top: 50%` means, the top position is calculated by using 50% of the parent element's height. And `-50%` on the transform property means, the card is translated in the negative Y axis (up direction) by 50% of the card's height.
+   `top: 50%` means the top position is calculated by using 50% of the parent element's height. And `-50%` on the transform property means the card is translated in the negative Y axis (up direction) by 50% of the card's height.
 
 2. Using `width` instead of `max-width`.
 
-   Using `width` and by utilizing `min()` function, to choose between minimum values of 327px and 100% viewport width. If width of the viewport is more than 327px, card's width will be constrained to 327px. If less, car's width will be calculated using 100% viewport width minus paddings.
+   Using `width` and by utilizing `min()` function, to choose between minimum values of 327px and 100% viewport width. If the width of the viewport is more than 327px, card's width will be constrained to 327px. If less, card's width will be calculated using 100% viewport width minus paddings.
 
-   And also to set the card's minimum width to `min-content`. Although there is no screen size that really that small, I think this is a good practice.
+   And also, setting the card's minimum width to `min-content`. Although there is no screen size that really that small, I think this is a good practice.
 
    ```css
    .card {
@@ -207,7 +207,7 @@ After:
 
 #### 🟦 Removed `<nav>` from Wrapping The Links
 
-Reading the Webdev navigation [^4], I was unsure whether or not I should use `nav` element to wrap the links. The document mentions 5 type of navigations, and all are related with the pages within the website. It doesn't mention when a page has group of links to other websites.
+Reading the Webdev navigation [^4], I was unsure whether or not I should use `nav` element to wrap the links. The document mentions 5 type of navigations, all are related with the pages within the website. It doesn't mention when a page has group of links to other websites.
 
 Thanks to discord member @Darkstar, who confirmed to not use the `nav`.
 
