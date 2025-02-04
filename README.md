@@ -41,7 +41,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ](https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ)
+- Live Site URL: [https://finkusuma-dev.github.io/frontendmentor-social-links-profile/](https://finkusuma-dev.github.io/frontendmentor-social-links-profile/)
 
 ## My process
 
