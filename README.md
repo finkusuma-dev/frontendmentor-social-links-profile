@@ -13,11 +13,11 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
   - [My process](#my-process)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
+      - [🟦 `:focus-visible` Class Selectors](#-focus-visible-class-selectors)
       - [🟦 No Longer Use "Rem Font Size Hack"](#-no-longer-use-rem-font-size-hack)
       - [🟦 Use Both `px` and `rem` Units](#-use-both-px-and-rem-units)
       - [🟦 Removed `px` from CSS Spacing Variables](#-removed-px-from-css-spacing-variables)
       - [🟦 Setup CSS Text Preset Variables](#-setup-css-text-preset-variables)
-      - [🟦 `:focus-visible` Class Selectors](#-focus-visible-class-selectors)
       - [🟦 Solved: Card's Width Shrinks when Using `max-width`](#-solved-cards-width-shrinks-when-using-max-width)
         - [**Before and after the fix**](#before-and-after-the-fix)
       - [🟦 Removed `<nav>` from Wrapping The Links](#-removed-nav-from-wrapping-the-links)
@@ -53,6 +53,40 @@ Users should be able to:
 - Mobile-first workflow
 
 ### What I learned
+
+#### 🟦 `:focus-visible` Class Selectors
+
+There are two class selectors for element that currently in focus: `:focus` and `:focus-visible`. (Actually three, but this solution only implements two.)
+
+From my testing, the difference between the two:
+
+- When using `:focus` on an anchor link, and the link is clicked/tapped it will show the focus ring.
+- While using `:focus-visible`, when the link is clicked/tapped it won't show the focus ring.
+
+While using keyboard `tab` key to change focus, both show the focus ring.
+
+On this solution, I use `:focus-visible` on the anchor links:
+
+```css
+ul.links {
+  a:focus-visible {
+    outline: 1px solid var(--color-green);
+  }
+}
+```
+
+and `:focus` on the attribution links:
+
+```css
+.attribution {
+  a:focus {
+    outline: 1px solid var(--color-white);
+    border-radius: 1px;
+  }
+}
+```
+
+Hence, you will see focus ring when clicking/tapping the attribution links, but you won't see it when clicking/tapping the social links.
 
 #### 🟦 No Longer Use "Rem Font Size Hack"
 
@@ -111,38 +145,6 @@ In the figma file, there are text preset design tokens containing font family, f
 
 h1 {
   font: var(--text-preset-1);
-}
-```
-
-#### 🟦 `:focus-visible` Class Selectors
-
-There are two class selectors for element that currently in focus: `:focus` and `:focus-visible`. (Actually three, but this solution only implements two.)
-
-From my testing, the difference between the two:
-
-- When using `:focus` on an anchor link, and the link is clicked/tapped it will show the focus ring.
-- While using `:focus-visible`, when the link is clicked/tapped it won't show the focus ring.
-
-While using keyboard `tab` key to change focus, both showing the focus ring.
-
-On this solution, I use `:focus-visible` on the anchor links:
-
-```css
-ul.links {
-  a:focus-visible {
-    outline: 1px solid var(--color-green);
-  }
-}
-```
-
-and `:focus` on the attribution links:
-
-```css
-.attribution {
-  a:focus {
-    outline: 1px solid var(--color-white);
-    border-radius: 1px;
-  }
 }
 ```
 
