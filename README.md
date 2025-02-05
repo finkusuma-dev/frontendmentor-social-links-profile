@@ -186,7 +186,7 @@ After trials, I concluded there are two ways to solve this:
 
    ```css
    .card {
-     width: min(calc(327rem / 16), calc(100vw - (24px)));
+     width: min(calc(327rem / 16), calc(100vw - (2 * 24px)));
      min-width: min-content;
    }
    ```
